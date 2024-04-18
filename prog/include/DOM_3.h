@@ -10,7 +10,7 @@
 class DepthOfMarket_3: public IDepthOfMarket {
     private:
         std::map<size_t, Order> DOM;
-        std::multimap<float, size_t> price_map; // Сделать unordered
+        std::multimap<float, size_t> price_map;
         size_t counter;
     public:
         DepthOfMarket_3();

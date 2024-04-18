@@ -2,7 +2,7 @@
 #define DOM_1_HEADER
 
 #include <vector>
-#include <map>
+#include <unordered_map>
 #include <iostream>
 #include "Order.h"
 #include "DOM.h"
@@ -19,7 +19,7 @@ struct cmpByPriceDesc {
 
 class DepthOfMarket_1: public IDepthOfMarket {
     private:
-        std::map<size_t, Order> DOM; // Сделать unordered
+        std::unordered_map<size_t, Order> DOM;
         size_t counter;
     public:
         DepthOfMarket_1();

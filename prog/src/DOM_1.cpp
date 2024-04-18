@@ -61,7 +61,7 @@ const Order* DepthOfMarket_1::get_order(size_t order_index) {
 
 std::vector<Order> DepthOfMarket_1::get_DOM() {
     std::vector<Order> order_vector;
-    for( std::map<size_t, Order>::iterator it = DOM.begin(); it != DOM.end(); ++it ) {
+    for( std::unordered_map<size_t, Order>::iterator it = DOM.begin(); it != DOM.end(); ++it ) {
         order_vector.push_back( it->second );
     }
     return order_vector;
